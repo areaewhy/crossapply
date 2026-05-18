@@ -1,0 +1,9 @@
+<pre>
+SELECT *
+FROM tableA
+  CROSS APPLY (
+    SELECT TOP 5 _column_
+    FROM tableB
+    ORDER BY _column_ DESC
+  ) x
+</pre>
