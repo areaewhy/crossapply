@@ -1,9 +1,29 @@
-<pre>
-SELECT *
-FROM tableA
-  CROSS APPLY (
-    SELECT TOP 5 _column_
-    FROM tableB
-    ORDER BY _column_ DESC
-  ) x
-</pre>
+<html>
+  <head>
+    <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+      }
+      pre {
+          border:1px solid #c5c5c5;
+          padding:30px;
+          border-radius:10px;
+          box-shadow:2px 2px 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+    SELECT *
+    FROM tableA
+      CROSS APPLY (
+        SELECT TOP 5 _column_
+        FROM tableB
+        ORDER BY _column_ DESC
+      ) x
+    </pre>    
+  </body>
+</html>
